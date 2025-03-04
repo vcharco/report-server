@@ -8,21 +8,27 @@ Esta aplicación tiene el objetivo de servir como ejemplo para crear reportes pr
 
 ## Despliegue en local
 
-1. Clonar el repositorio
+1. Clonar el repositorio.
 
 ```bash
-git clone ...
+git clone https://github.com/vcharco/report-server.git
 ```
 
-2. Accedemos al nuevo directorio e instalamos las dependencias.
+2. Acceder al nuevo directorio e instalar las dependencias.
 
 ```bash
 cd report-server
 npm install
 ```
 
-3. Levantamos la base de datos (debemos tener docker y docker-compose instalado y corriendo).
+3. Levantar la base de datos (necesario docker y docker-compose instalado y corriendo).
 
 ```bash
 docker-compose up -d
+```
+
+4. Lanzar la aplicación.
+
+```bash
+npm run start:dev
 ```
