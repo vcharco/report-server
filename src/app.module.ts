@@ -2,6 +2,7 @@ import { Module } from '@nestjs/common';
 import { ConfigModule, ConfigService } from '@nestjs/config';
 import { AppConfiguration } from './config/app.config';
 import { TypeOrmModule } from '@nestjs/typeorm';
+import { EmployeesModule } from './employees/employees.module';
 
 @Module({
   imports: [
@@ -16,10 +17,11 @@ import { TypeOrmModule } from '@nestjs/typeorm';
         database: configService.get<string>('dbName', 'postgres'),
         username: configService.get<string>('dbUser', 'postgres'),
         password: configService.get<string>('dbPass', 'postgres'),
-        autoLoadEntities: true,
-        synchronize: true,
+        autoLoadEntities: false,
+        synchronize: false,
       }),
     }),
+    EmployeesModule,
   ],
   controllers: [],
   providers: [],
