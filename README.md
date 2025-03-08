@@ -39,7 +39,9 @@ ENVIRONMENT=dev
 docker-compose up -d
 ```
 
-5. Lanzar la aplicación.
+5. Abrir la base de datos con algún sistema de gestión como TablePlus y ejecutar el sql de `/migrations/reportdb.sql`, el cual contiene queries para crear las tablas y rellenarlas con datos de pruebas.
+
+6. Lanzar la aplicación.
 
 ```bash
 npm run start:dev
