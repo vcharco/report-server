@@ -4,7 +4,7 @@
 
 # NestJS Report Server
 
-Esta aplicación tiene el objetivo de servir como ejemplo para crear reportes profesionales en NestJS.
+Esta aplicación tiene el objetivo de servir como ejemplo para crear reportes profesionales en NestJS. Los ejemplos han sido desarrollados seguiendo el curso de Fernando Herrera en Devtalles.
 
 ## Despliegue en local
 
@@ -46,3 +46,10 @@ docker-compose up -d
 ```bash
 npm run start:dev
 ```
+
+7. Acceder a una de las siguientes URLs para ver los reportes generados dinámicamente.
+
+- Reporte Hola Mundo: http://localhost:3001/basic-reports
+- Reporte Constancia de Empleo: http://localhost:3001/basic-reports/employment-letter/1
+- Reporte Tabla Países: http://localhost:3001/basic-reports/countries
+- Reporte Factura: http://localhost:3001/basic-reports/orders/1
