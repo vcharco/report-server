@@ -52,4 +52,4 @@ npm run start:dev
 - Reporte Hola Mundo: http://localhost:3001/basic-reports
 - Reporte Constancia de Empleo: http://localhost:3001/basic-reports/employment-letter/1
 - Reporte Tabla Países: http://localhost:3001/basic-reports/countries
-- Reporte Factura: http://localhost:3001/basic-reports/orders/1
+- Reporte Factura: http://localhost:3001/basic-reports/orders/10250

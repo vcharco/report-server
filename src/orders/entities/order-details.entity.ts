@@ -18,11 +18,13 @@ export class OrderDetails {
   @Column('integer', { name: 'quantity', nullable: true })
   quantity: number | null;
 
-  @ManyToOne(() => Orders, (orders) => orders.orderDetails)
+  @ManyToOne(() => Orders, (orders) => orders.orderDetails, { eager: true })
   @JoinColumn([{ name: 'order_id', referencedColumnName: 'orderId' }])
   order: Orders;
 
-  @ManyToOne(() => Products, (products) => products.orderDetails)
+  @ManyToOne(() => Products, (products) => products.orderDetails, {
+    eager: true,
+  })
   @JoinColumn([{ name: 'product_id', referencedColumnName: 'productId' }])
   product: Products;
 }
