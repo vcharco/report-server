@@ -51,4 +51,14 @@ export class BasicReportsController {
     pdfDoc.pipe(response);
     pdfDoc.end();
   }
+
+  @Get('chart')
+  async chartReport(@Res() response: Response) {
+    response.setHeader('Content-Type', 'Application/pdf');
+
+    const pdfDoc = await this.service.chartReport();
+    pdfDoc.info.Title = 'Chart.pdf';
+    pdfDoc.pipe(response);
+    pdfDoc.end();
+  }
 }

@@ -10,11 +10,8 @@ import {
   CountriesReportProps,
   getCountriesReport,
 } from 'src/reports';
-import {
-  getOrdersReport,
-  OrdersReportProductProp,
-  OrdersReportProps,
-} from 'src/reports/orders.report';
+import { getChartReport } from 'src/reports/chart.report';
+import { getOrdersReport, OrdersReportProps } from 'src/reports/orders.report';
 
 @Injectable()
 export class BasicReportsService {
@@ -104,6 +101,12 @@ export class BasicReportsService {
     };
 
     const docDefinition = getOrdersReport(props);
+    const doc = this.printService.createPdf(docDefinition);
+    return doc;
+  }
+
+  async chartReport() {
+    const docDefinition = await getChartReport();
     const doc = this.printService.createPdf(docDefinition);
     return doc;
   }
